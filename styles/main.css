@@ -739,3 +739,76 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-secondary);
 }
+
+/* this is for that popup from red btn */
+
+.terminal-message {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: red;
+    /* classic green text */
+    background-color: #000;
+    /* black terminal bg */
+    padding: 1rem;
+    margin: 0;
+    white-space: pre-wrap;
+    line-height: 1.3;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Blinking block cursor */
+.terminal-message::after {
+    content: "█";
+    font-weight: bold;
+    animation: blink 1s infinite;
+    display: inline-block;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/* Optional: small text jitter/glitch */
+.glitch {
+    display: inline-block;
+    position: relative;
+    animation: glitchMove 0.3s infinite linear alternate-reverse;
+}
+
+@keyframes glitchMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-1px, 1px);
+    }
+
+    40% {
+        transform: translate(-1px, -1px);
+    }
+
+    60% {
+        transform: translate(1px, 1px);
+    }
+
+    80% {
+        transform: translate(1px, -1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}

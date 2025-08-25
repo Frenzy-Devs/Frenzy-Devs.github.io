@@ -328,3 +328,47 @@ function addExtraEffects() {
 }
 
 setTimeout(addExtraEffects, 2000);
+
+/**
+ * this is for the red btn hacker animetion
+ */
+
+const terminalMessage = document.getElementById('terminalMessage');
+
+const hackerText = `
+ERROR 404: StackTraceNotFoundException
+┌─────────────────────────────────┐
+│   Message: Secret Not Found     │
+│   File: /path/to/undefined.js   │
+│   Function: retrieveMystery()   │
+│   Status: undefined             │
+└─────────────────────────────────┘
+
+Hint: The secret you're looking for does not exist in this scope.
+`;
+
+// Typing effect with optional glitch span
+function typeTerminalMessage(text, element, delay = 30) {
+    let i = 0;
+    element.textContent = '';
+    function type() {
+        if (i < text.length) {
+            let char = text[i];
+            // randomly wrap chars in glitch class for jitter
+            if (char !== '\n' && Math.random() < 0.05) {
+                element.innerHTML += `<span class="glitch">${char}</span>`;
+            } else {
+                element.innerHTML += char;
+            }
+            i++;
+            setTimeout(type, delay);
+        }
+    }
+    type();
+}
+
+// Inject message when opening red popup
+redControl.addEventListener('click', () => {
+    openHelloPopup();
+    typeTerminalMessage(hackerText, terminalMessage, 25);
+});
