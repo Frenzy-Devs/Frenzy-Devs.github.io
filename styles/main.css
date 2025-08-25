@@ -5,61 +5,82 @@
     box-sizing: border-box;
 }
 
+
 :root {
     /* Dark Mode Colors */
     --bg-primary: #0a0a0a;
-    --bg-secondary: #1a1a1a;
-    --bg-tertiary: #2a2a2a;
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --text-accent: #00d4ff;
-    --accent-primary: #00d4ff;
-    --accent-secondary: #ff006e;
-    --accent-tertiary: #7b2cbf;
-    --border-color: #333333;
-    --shadow-color: rgba(0, 212, 255, 0.1);
-    
+    /* pure black */
+    --bg-secondary: #111827;
+    /* slate-900 */
+    --bg-tertiary: #1e293b;
+    /* slate-800 */
+
+    --text-primary: #f9fafb;
+    /* near-white */
+    --text-secondary: #94a3b8;
+    /* slate-400 */
+
+    --accent-primary: #3b82f6;
+    /* blue-500 */
+    --accent-secondary: #2563eb;
+    /* blue-600 */
+    --accent-tertiary: #1d4ed8;
+    /* blue-700 */
+
+    --border-color: #1e293b;
+    --shadow-color: rgba(59, 130, 246, 0.35);
+
     /* Light Mode Colors */
     --bg-primary-light: #ffffff;
-    --bg-secondary-light: #f8f9fa;
-    --bg-tertiary-light: #e9ecef;
-    --text-primary-light: #1a1a1a;
-    --text-secondary-light: #6c757d;
-    --border-color-light: #dee2e6;
-    --shadow-color-light: rgba(0, 0, 0, 0.1);
-    
-    /* Common Colors */
-    --success: #00ff88;
-    --warning: #ffaa00;
-    --error: #ff4757;
-    
-    /* Transitions */
+    --bg-secondary-light: #f8fafc;
+    /* slate-50 */
+    --bg-tertiary-light: #e2e8f0;
+    /* slate-200 */
+
+    --text-primary-light: #0f172a;
+    /* slate-900 */
+    --text-secondary-light: #475569;
+    /* slate-600 */
+
+    --accent-primary-light: #2563eb;
+    --accent-secondary-light: #3b82f6;
+    --accent-tertiary-light: #60a5fa;
+
+    --border-color-light: #cbd5e1;
+    --shadow-color-light: rgba(59, 130, 246, 0.2);
+
+    /* Utility */
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --error: #ef4444;
+
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode */
 body.dark-mode {
     --bg-primary: #0a0a0a;
-    --bg-secondary: #1a1a1a;
-    --bg-tertiary: #2a2a2a;
-    --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
-    --border-color: #333333;
-    --shadow-color: rgba(0, 212, 255, 0.1);
+    --bg-secondary: #111827;
+    --bg-tertiary: #1e293b;
+    --text-primary: #f9fafb;
+    --text-secondary: #94a3b8;
+    --border-color: #1e293b;
+    --shadow-color: rgba(59, 130, 246, 0.35);
 }
 
-/* Light Mode Styles */
+/* Light Mode */
 body.light-mode {
     --bg-primary: #ffffff;
-    --bg-secondary: #f8f9fa;
-    --bg-tertiary: #e9ecef;
-    --text-primary: #1a1a1a;
-    --text-secondary: #6c757d;
-    --border-color: #dee2e6;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border-color: #cbd5e1;
+    --shadow-color: rgba(59, 130, 246, 0.2);
 }
+
 
 body {
     font-family: 'Rajdhani', sans-serif;
@@ -72,7 +93,6 @@ body {
 
 /* Theme Toggle */
 .theme-toggle {
-    display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -82,7 +102,7 @@ body {
 .theme-btn {
     background: var(--bg-tertiary);
     border: 2px solid var(--accent-primary);
-    color: var(--accent-primary);
+    color: var((--accent-primary));
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -155,8 +175,8 @@ body {
     right: 0;
     bottom: 0;
     background-image: 
-        linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+        linear-gradient(rgba(255, 0, 0, 0.100) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 255, 0.100) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridMove 20s linear infinite;
 }
@@ -172,9 +192,9 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 0, 110, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(123, 44, 191, 0.1) 0%, transparent 50%);
+    /* background: radial-gradient(circle at 20% 80%, rgba(255, 0, 0, 0.050) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 0, 255, 0.050) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, transparent 0%, transparent 50%); */
 }
 
 /* Floating Cards in Hero */
