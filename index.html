@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frenzy Devs - Elite Development Team</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-particles"></div>
+        </div>
+        
+        <!-- Floating Cards in Hero -->
+        <div class="floating-cards-hero">
+            <div class="hero-card card-1">
+                <i class="fas fa-code"></i>
+                <span>Code</span>
+            </div>
+            <div class="hero-card card-2">
+                <i class="fas fa-palette"></i>
+                <span>Design</span>
+            </div>
+            <div class="hero-card card-3">
+                <i class="fas fa-rocket"></i>
+                <span>Launch</span>
+            </div>
+            <div class="hero-card card-4">
+                <i class="fas fa-users"></i>
+                <span>Team</span>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">FRENZY</span>
+                    <span class="title-line">DEVS</span>
+                </h1>
+                <p class="hero-subtitle">Elite Development Team</p>
+                <p class="hero-description">We are a team of friends who code, create, and conquer the digital realm
+                    together.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <button class="control red" id="redControl"></button>
+                            <button class="control yellow" id="yellowControl"></button>
+                            <button class="control green" id="greenControl"></button>
+                        </div>
+                        <span class="window-title">frenzy_devs.js</span>
+                    </div>
+                    <div class="window-content">
+                        <pre><code class="typing-code" id="typingCode"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hello Popup (Red Button) -->
+    <div class="popup-overlay" id="helloPopupOverlay">
+        <div class="popup">
+            <div class="popup-header">
+                <h3>Hello!</h3>
+                <button class="popup-close" id="helloPopupClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-content">
+                <div class="recruit-hero">
+                    <i class="fas fa-hand-wave"></i>
+                    <h4>Hello there!</h4>
+                </div>
+                <p>Hello! Welcome to Frenzy Devs. We're glad you're here!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Popup (Yellow Button) -->
+    <div class="popup-overlay" id="aboutPopupOverlay">
+        <div class="popup">
+            <div class="popup-header">
+                <h3>About Frenzy Devs</h3>
+                <button class="popup-close" id="aboutPopupClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-content">
+                <div class="recruit-hero">
+                    <i class="fas fa-info-circle"></i>
+                    <h4>Hello!</h4>
+                </div>
+                <p>Hello! We are more than just developers - we are a family of passionate creators, problem solvers, and
+                    digital warriors. Our bond goes beyond code; we're friends who share a common vision of building
+                    amazing things together.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Creativity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recruitment Popup (Green Button) -->
+    <div class="popup-overlay" id="recruitPopupOverlay">
+        <div class="popup">
+            <div class="popup-header">
+                <h3>Join Frenzy Devs</h3>
+                <button class="popup-close" id="recruitPopupClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-content">
+                <div class="recruit-hero">
+                    <i class="fas fa-users"></i>
+                    <h4>We're Recruiting!</h4>
+                </div>
+                <p>Hello! Are you ready to join an elite team of developers who push boundaries and create amazing things
+                    together?</p>
+                <div class="requirements">
+                    <h5>What We're Looking For:</h5>
+                    <ul>
+                        <li>Passion for coding and innovation</li>
+                        <li>Team player with great communication</li>
+                        <li>Willingness to learn and grow</li>
+                        <li>Creative problem-solving skills</li>
+                    </ul>
+                </div>
+                <div class="popup-actions">
+                    <button class="btn btn-primary">Apply Now</button>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeBtn" class="theme-btn">
+            <img src="public/moon-icon.svg" alt="Theme Toggle" class="theme-icon">
+        </button>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
