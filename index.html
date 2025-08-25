@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Frenzy Devs - Elite Development Team</title>
     <link rel="stylesheet" href="styles/main.css">
     <link
@@ -51,7 +51,7 @@
 
     <!-- Hacker Error Popup (Red Button) -->
     <div class="popup-overlay" id="helloPopupOverlay">
-        <div class="code-window" style="margin: 18px;">
+        <div class="code-window" style="margin: 18px; user-select: none;">
             <div class="popup-header"
                 style="padding: 12px 24px; display: flex; justify-content: space-between; align-items: center;">
                 <h3 class="window-title" style="font-size: 16px; color: var(--text-secondary); font-weight: normal;">
@@ -68,7 +68,7 @@
 
     <!-- About Us Popup (Yellow Button) -->
     <div class="popup-overlay" id="aboutPopupOverlay">
-        <div class="popup">
+        <div class="popup" style="user-select: none;">
             <div class="popup-header">
                 <h3>About Frenzy Devs</h3>
                 <button class="popup-close" id="aboutPopupClose">
@@ -101,7 +101,7 @@
 
     <!-- Recruitment Popup (Green Button) -->
     <div class="popup-overlay" id="recruitPopupOverlay">
-        <div class="popup">
+        <div class="popup" style="user-select: none;">
             <div class="popup-header">
                 <h3>Join Frenzy Devs</h3>
                 <button class="popup-close" id="recruitPopupClose">
@@ -113,7 +113,8 @@
                     <i class="fas fa-users"></i>
                     <h4>We're Recruiting!</h4>
                 </div>
-                <p style="text-align: center;">Think what we do is fun? Ready to push boundaries with us? Apply below and join the frenzy.
+                <p style="text-align: center;">Think what we do is fun? Ready to push boundaries with us? Apply below
+                    and join the frenzy.
                     Let's create amazing things together?</p>
                 <div class="requirements">
                     <h5>[SKILLS]</h5>
@@ -125,8 +126,8 @@
                     </ul>
                 </div>
                 <div class="popup-actions">
-                    <button class="btn btn-primary">Apply Now</button>
-                    <button class="btn btn-secondary" style="display: none;">Learn More</button>
+                    <button class="btn btn-primary" style="display: none;">Apply Now</button>
+                    <a class="btn btn-secondary" href="https://discord.com/invite/QcHQKYw2ex">Discord</a>
                 </div>
             </div>
         </div>
