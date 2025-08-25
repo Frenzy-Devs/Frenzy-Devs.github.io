@@ -72,6 +72,7 @@ body {
 
 /* Theme Toggle */
 .theme-toggle {
+    display: none;
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -185,64 +186,6 @@ body {
     bottom: 0;
     pointer-events: none;
     z-index: 1;
-}
-
-.hero-card {
-    position: absolute;
-    background: var(--bg-tertiary);
-    border: 2px solid var(--accent-primary);
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px var(--shadow-color);
-    transition: all var(--transition-normal);
-    backdrop-filter: blur(10px);
-    opacity: 0.8;
-    cursor: pointer;
-}
-
-.hero-card:hover {
-    opacity: 1;
-    transform: scale(1.1);
-    box-shadow: 0 15px 40px var(--shadow-color), 0 0 30px rgba(0, 212, 255, 0.3);
-    border-color: var(--accent-secondary);
-}
-
-.hero-card i {
-    font-size: 2rem;
-    color: var(--accent-primary);
-    margin-bottom: 10px;
-    display: block;
-}
-
-.hero-card span {
-    color: var(--text-primary);
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.hero-card.card-1 {
-    top: 15%;
-    left: 10%;
-    animation: float1 8s ease-in-out infinite;
-}
-
-.hero-card.card-2 {
-    top: 25%;
-    right: 15%;
-    animation: float2 8s ease-in-out infinite 2s;
-}
-
-.hero-card.card-3 {
-    bottom: 25%;
-    left: 15%;
-    animation: float3 8s ease-in-out infinite 4s;
-}
-
-.hero-card.card-4 {
-    bottom: 15%;
-    right: 10%;
-    animation: float4 8s ease-in-out infinite 6s;
 }
 
 @keyframes float1 {
@@ -756,18 +699,6 @@ body {
         width: 24px;
         height: 24px;
     }
-    
-    .hero-card {
-        padding: 15px;
-    }
-    
-    .hero-card i {
-        font-size: 1.5rem;
-    }
-    
-    .hero-card span {
-        font-size: 0.8rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -784,11 +715,6 @@ body {
         margin: 20px;
         width: calc(100% - 40px);
     }
-    
-    .hero-card.card-1 { left: 5%; top: 10%; }
-    .hero-card.card-2 { right: 5%; top: 20%; }
-    .hero-card.card-3 { left: 5%; bottom: 20%; }
-    .hero-card.card-4 { right: 5%; bottom: 10%; }
 }
 
 /* Smooth Scrolling */
