@@ -20,11 +20,11 @@ function initTheme() {
     if (currentTheme === 'light') {
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
-        themeBtn.innerHTML = '<img src="public/sun-icon.svg" alt="Light Mode" class="theme-icon">';
+        themeBtn.innerHTML = '<img src="public/lightMode.svg" alt="Light Mode" class="theme-icon">';
     } else {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
-        themeBtn.innerHTML = '<img src="public/moon-icon.svg" alt="Dark Mode" class="theme-icon">';
+        themeBtn.innerHTML = '<img src="public/darkMode.svg" alt="Dark Mode" class="theme-icon">';
     }
 }
 
@@ -34,12 +34,12 @@ function toggleTheme() {
         currentTheme = 'light';
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
-        themeBtn.innerHTML = '<img src="public/sun-icon.svg" alt="Light Mode" class="theme-icon">';
+        themeBtn.innerHTML = '<img src="public/lightMode.svg" alt="Light Mode" class="theme-icon">';
     } else {
         currentTheme = 'dark';
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
-        themeBtn.innerHTML = '<img src="public/moon-icon.svg" alt="Dark Mode" class="theme-icon">';
+        themeBtn.innerHTML = '<img src="public/darkMode.svg" alt="Dark Mode" class="theme-icon">';
     }
     
     localStorage.setItem('theme', currentTheme);
